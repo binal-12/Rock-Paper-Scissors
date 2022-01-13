@@ -77,15 +77,17 @@ function addButtons(){
 
 let user, comp, comb, winner
 const options = ["Rock", "Paper", "Scissors"]
-const bl = false;
+let bl = false
 
 function select(crr){
     if(bl){
-        
+        resetHand()
     }
+    bl = true
     
     user = crr.children[0].textContent
-    comp = options[Math.floor(Math.random() * 3)]
+    comp = options[Math.floor(Math.random() * 2)]
+    console.log(comp)
     comb = user + comp
     // console.log(comb)
     switch(comb){
@@ -97,18 +99,18 @@ function select(crr){
         case "ScissorsScissors":
         case "RockRock" :
         case "PaperPaper" :
-            winner = "comp"
+            winner = "tie"
             break
         case "ScissorsRock":
         case "RockPaper":
         case "PaperScissors":
-            winner = "tie"
+            winner = "comp"
             break
     }
     // console.log(winner)
     showHand(user,comp)
-    updateScore(winner) 
-    setTimeout(resetHand, 2000)
+    updateScore(winner)
+    setTimeout(resetHand, 3500)
     // console.log(userScore)
     // console.log(compScore)
 }
@@ -155,11 +157,11 @@ function updateScore(winner){
     if(winner == "user"){
         userScore += 1
         // console.log(userScore)
-        addScores(winner)
+        setTimeout(addScores(winner), 1000)
     } else if (winner == "comp"){
         compScore += 1
         // console.log(compScore)
-        addScores(winner)
+        setTimeout(addScores(winner), 1000)
     }
 
     if(userScore >= 5){
