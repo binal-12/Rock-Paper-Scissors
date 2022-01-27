@@ -24,7 +24,7 @@ function onStart(){
     // MAIN CHANGES
     main.style.flexDirection = "row"
     main.style.alignItems = "center"
-    main.style.justifyContent = "space-between"
+    main.style.justifyContent = "center"
     main.style.width = "80%"
     main.style.marginTop = "45px"
 
@@ -40,10 +40,10 @@ function onStart(){
     // BTN STYLING
 
     btn[0].style.display = "none"
-    btn[1].style.transform = "scale(0.75)"
-    btn[1].style.margin = "0 0"
-    btn[2].style.margin = "0 0"
-    btn[2].style.transform = "scale(0.75)"
+    // btn[1].style.transform = "scale(0.75)"
+    // btn[1].style.margin = "0 0"
+    // btn[2].style.margin = "0 0"
+    // btn[2].style.transform = "scale(0.75)"
 
     setTimeout(addButtons, 1000)
     // addButtons();
