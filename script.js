@@ -110,7 +110,7 @@ function select(crr){
     // console.log(winner)
     showHand(user,comp)
     updateScore(winner)
-    setTimeout(resetHand, 3500)
+    setTimeout(resetHand, 1700)
     // console.log(userScore)
     // console.log(compScore)
 }
